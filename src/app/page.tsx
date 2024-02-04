@@ -1,13 +1,23 @@
-import Image from "next/image";
 import NavLinks from "./components/NavLinks";
+import Logo from "./components/Logo";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
-      <div className="bg-[url('./assets/herobg1.jpg')] bg-cente bg-cover w-full h-screen py-16 px-32">
-        <div className="flex justify-between items-center">
-          <div className="font-bold text-lg text-color1">Adventure Island.</div>
-          <NavLinks/>
+    <main className="flex flex-col">
+      <div className="bg-[url('./assets/herobg1.jpg')] bg-top bg-cover w-full h-screen py-16 px-32 flex flex-col relative">
+        <div className="flex justify-between items-center pr-24">
+          <Logo />
+          <NavLinks />
+        </div>
+        <div className="flex flex-col flex-1 justify-center items-center mb-16">
+          <div className="text-4xl text-black font-semibold mb-4">Your Adventure Begins Here!</div>
+          <div className="text-lg text-color3 font-semibold mb-6">From Imagination to Reality.</div>
+          <Image width={45} height={40} alt="" src={require('./assets/arrow1.png')}/>
+        </div>
+        <div className="flex gap-5 justify-center items-center -rotate-90 absolute right-[-5rem] top-[12rem]">
+          <div className="h-[1px] w-[7rem] bg-color3"></div>
+          <div className="text-color3 text-sm font-semibold">ICELAND NATIONAL LAKE</div>
         </div>
       </div>
       <div className=""></div>
