@@ -2,6 +2,7 @@ import NavLinks from "./components/NavLinks";
 import Logo from "./components/Logo";
 import Image from "next/image";
 import PageIndicator from "./components/PageIndicator";
+import FeaturedSection from "./components/FeaturedSection";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         </div>
         <PageIndicator/>
       </div>
-      <div className=""></div>
+      <FeaturedSection/>
     </main>
   );
 }

@@ -18,6 +18,12 @@ const config: Config = {
         'color2':'#858585',
         'color3':'#797979',
         'color4':'#000000',
+        'color5':'#111111',
+        'color6':'#D3D3D3',
+        'color7':'#7E7E7E',
+        'color8':'#8FFFFF',
+        'color9':'#FFFFFF',
+        'color10':'#5A5A5A',
       }
     },
   },
