@@ -10,7 +10,9 @@ const FeaturedSection = () => {
           Journey to the mysterious island.
         </h2>
       </div>
-      <div>
+      <div className="flex justify-between items-center">
+        <FeaturedWrapper/>
+        <div className="h-[25rem] w-[1px] bg-color1"></div>
         <FeaturedWrapper/>
       </div>
     </div>

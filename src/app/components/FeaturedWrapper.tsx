@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import BookNowBtn from "./BookNowBtn";
 
 const FeaturedWrapper = () => {
   const images = [
@@ -61,7 +62,7 @@ const FeaturedWrapper = () => {
                 <div className=" font-medium text-color10 relative w-[6rem]">Rs. 1,07,999 <div className="absolute h-[2px] w-full bg-red-500 top-1/2"></div></div>
                 <div className="text-color9 text-2xl font-semibold">Rs. 69,999</div>
             </div>
-            <div className="text-sm font-semibold border flex justify-center items-center px-10">BOOK NOW</div>
+            <BookNowBtn/>
         </div>
       </div>
     </div>

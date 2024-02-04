@@ -3,6 +3,7 @@ import Logo from "./components/Logo";
 import Image from "next/image";
 import PageIndicator from "./components/PageIndicator";
 import FeaturedSection from "./components/FeaturedSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <PageIndicator/>
       </div>
       <FeaturedSection/>
+      <Footer/>
     </main>
   );
 }
