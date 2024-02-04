@@ -17,6 +17,7 @@ const config: Config = {
         'color1':'#3A3A3A',
         'color2':'#858585',
         'color3':'#797979',
+        'color4':'#000000',
       }
     },
   },

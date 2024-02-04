@@ -1,6 +1,7 @@
 import NavLinks from "./components/NavLinks";
 import Logo from "./components/Logo";
 import Image from "next/image";
+import PageIndicator from "./components/PageIndicator";
 
 export default function Home() {
   return (
@@ -15,10 +16,11 @@ export default function Home() {
           <div className="text-lg text-color3 font-semibold mb-6">From Imagination to Reality.</div>
           <Image width={45} height={40} alt="" src={require('./assets/arrow1.png')}/>
         </div>
-        <div className="flex gap-5 justify-center items-center -rotate-90 absolute right-[-5rem] top-[12rem]">
-          <div className="h-[1px] w-[7rem] bg-color3"></div>
+        <div className="flex gap-5 justify-center items-center -rotate-90 absolute right-[-5rem] top-[14rem]">
+          <div className="h-[1px] w-[8rem] bg-color3"></div>
           <div className="text-color3 text-sm font-semibold">ICELAND NATIONAL LAKE</div>
         </div>
+        <PageIndicator/>
       </div>
       <div className=""></div>
     </main>
