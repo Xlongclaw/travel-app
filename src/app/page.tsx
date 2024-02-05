@@ -1,18 +1,14 @@
-import NavLinks from "./components/NavLinks";
-import Logo from "./components/Logo";
 import Image from "next/image";
 import PageIndicator from "./components/PageIndicator";
 import FeaturedSection from "./components/FeaturedSection";
 import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
       <div className="bg-[url('./assets/herobg1.jpg')] bg-top bg-cover w-full h-screen py-16 px-32 flex flex-col relative">
-        <div className="flex justify-between items-center pr-24">
-          <Logo />
-          <NavLinks />
-        </div>
+        <NavBar/>
         <div className="flex flex-col flex-1 justify-center items-center mb-16">
           <div className="text-4xl text-black font-semibold mb-4">Your Adventure Begins Here!</div>
           <div className="text-lg text-color3 font-semibold mb-6">From Imagination to Reality.</div>
@@ -25,6 +21,7 @@ export default function Home() {
         <PageIndicator/>
       </div>
       <FeaturedSection/>
+      {/* <div className="w-full bg-white h-[50rem] "></div> */}
       <Footer/>
     </main>
   );
