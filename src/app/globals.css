@@ -32,3 +32,12 @@ width: 12px;
 ::-webkit-scrollbar-thumb{
   background-color: rgb(234, 234, 234);
 }
+
+.custom-scroll::-webkit-scrollbar{
+  display: none;
+background-color: rgb(38, 38, 38);
+height: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb{
+  background-color: rgb(234, 234, 234);
+}

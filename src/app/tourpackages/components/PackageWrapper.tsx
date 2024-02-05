@@ -1,6 +1,7 @@
+'use client'
 import Image from "next/image";
 import React from "react";
-
+import {motion} from 'framer-motion'
 const PackageWrapper = ({
   tourPackage,
 }: {
@@ -13,6 +14,8 @@ const PackageWrapper = ({
     originalPrice: string;
     discount: string;
     link: string;
+    country: string;
+    city: string;
   };
 }) => {
   const finalPrice = () => {
@@ -20,7 +23,7 @@ const PackageWrapper = ({
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <div className=" rounded-md p-3 w-[21rem] shadow-md">
+    <motion.div whileHover={{scale:1.05}} className=" rounded-md p-3 w-[21rem] shadow-md cursor-pointer">
       <Image
         className="w-full h-[17rem]"
         src={tourPackage.image}
@@ -30,8 +33,8 @@ const PackageWrapper = ({
         {tourPackage.name}
       </div>
       <div className="text-color1 font-semibold mt-0 text-sm flex gap-1">
-        <h3 className="text-[#33bdbf]">5N</h3>
-        <h3>Dubai</h3>
+        <h3 className="text-[#33bdbf]">{tourPackage.night}N</h3>
+        <h3>{tourPackage.country}</h3>
       </div>
       <h3 className="text-xs font-medium text-color2 my-4">
         {tourPackage.description}
@@ -45,7 +48,7 @@ const PackageWrapper = ({
           Rs. {finalPrice()} <span className="text-xs">per person</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

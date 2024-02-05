@@ -6,7 +6,7 @@ import {motion} from 'framer-motion'
 
 const HeroBanner = () => {
   return (
-    <div className="w-full h-[20rem] overflow-hidden flex items-center justify-center mt-4 relative">
+    <div className="w-full h-[25rem] overflow-hidden flex items-center justify-center mt-4 relative">
       <Image className="w-[95%]" src={require("../assets/herobg7.jpg")} alt="" />
       <div className="absolute left-16 bottom-12 flex flex-col">
         <div className="  text-3xl font-semibold text-color6">

@@ -9,6 +9,8 @@ const popularPackagesData = [
     originalPrice: "1,07,999",
     discount: "20",
     link: "",
+    country:'Dubai',
+    city:''
   },
   {
     name: "Super Miami.",
@@ -20,6 +22,8 @@ const popularPackagesData = [
     originalPrice: "1,69,999",
     discount: "20",
     link: "",
+    country:'Miami',
+    city:''
   },
   {
     name: "Rock in Japan",
@@ -31,10 +35,12 @@ const popularPackagesData = [
     originalPrice: "2,07,999",
     discount: "20",
     link: "",
+    country:'Japan',
+    city:''
   },
   {
-    name: "Super Miami.",
-    image: require("@/app/assets/herobg8.jpg"),
+    name: "Bingo Africa.",
+    image: require("@/app/assets/herobg6.jpg"),
     night: "3",
     day: "4",
     description:
@@ -42,6 +48,8 @@ const popularPackagesData = [
     originalPrice: "1,69,999",
     discount: "20",
     link: "",
+    country:'Africa',
+    city:''
   },
 ];
 
