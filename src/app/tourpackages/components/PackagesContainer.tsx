@@ -8,7 +8,7 @@ const PackagesContainer = () => {
   return (
     <div className="flex justify-between mt-4 mr-16 relative">
           {popularPackagesData.map((tourPackage, i) => (
-            <PackageWrapper key={i} tourPackage={tourPackage} />
+            <PackageWrapper key={i} tourPackage={JSON.parse(JSON.stringify(tourPackage))} />
           ))}
           <Icon.BsChevronRight
             size={60}

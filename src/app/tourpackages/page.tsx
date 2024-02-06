@@ -1,14 +1,12 @@
 import React from "react";
 import NavBar from "@/app/components/NavBar";
 import HeroBanner from "../components/HeroBanner";
-import PackageWrapper from "./components/PackageWrapper";
-import popularPackagesData from "./constants/popularPackagesData";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import TitleText from "./components/TitleText";
 import PackagesContainer from "./components/PackagesContainer";
 import DashedLine from "./components/DashedLine";
 import MustVisitContainer from "./components/MustVisitContainer";
+import bannerData from "./constants/bannerData";
 
 const page = () => {
   return (
@@ -17,7 +15,7 @@ const page = () => {
         <NavBar />
       </div>
       <div className="px-32 ">
-        <HeroBanner />
+        <HeroBanner bannerData={bannerData} height={400} />
         <TitleText
           title="POPULAR PACKAGES"
           subtitle="Our most popular tour package just for you"
@@ -25,7 +23,6 @@ const page = () => {
         <PackagesContainer />
         <DashedLine />
         <MustVisitContainer />
-
         <DashedLine />
       </div>
 
