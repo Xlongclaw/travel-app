@@ -26,10 +26,11 @@ const HeroBanner = ({bannerData,height}:{bannerData:bannerDataType,height:Number
         }
       </div>
 
-      <div className="absolute left-16 bottom-12 flex flex-col">
+      <div className="absolute right-36 bottom-12 flex flex-col items-c gap-3">
         <div className="  text-3xl font-semibold text-color9">
           Explore <strong>AFRICA</strong>{" "}
         </div>
+        <div className="text-color9 max-w-[20rem] text-sm">GET 20% off and cashback upto Rs.5000 on your first booking.</div>
         <motion.div
           onClick={() => {}}
           whileHover={{ scale: 1.1 }}

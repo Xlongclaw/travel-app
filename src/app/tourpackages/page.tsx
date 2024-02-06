@@ -27,7 +27,8 @@ const page = () => {
         <div className="flex justify-between items-center mt-10 pr-20 pl-8">
           {/* <div>HELLO</div> */}
           <TitleText
-            title="OUR POPULAR PACKAGES"
+            title="Our Popular "
+            strong = "PACKAGES"
             subtitle="Our most popular tour package just for you."
           />
           <div className="text-sm font-bold flex gap-4 items-center">VIEW ALL <Icon.BsArrowRight className="gap-4"/></div>

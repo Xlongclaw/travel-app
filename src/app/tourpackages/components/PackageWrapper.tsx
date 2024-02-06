@@ -13,7 +13,7 @@ const PackageWrapper = ({
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <motion.div whileHover={{scale:1.05}} className=" p-3 w-[24.3%] shadow1 bg-color9 cursor-pointer flex-shrink-0">
+    <motion.div whileHover={{scale:1.05}} className=" p-3 w-[24.3%] shadow2 bg-color9 cursor-pointer flex-shrink-0">
       <Image
         className="w-full h-[17rem]"
         src={tourPackage.image}
