@@ -21,7 +21,6 @@ export default function Home() {
         <PageIndicator/>
       </div>
       <FeaturedSection/>
-      {/* <div className="w-full bg-white h-[50rem] "></div> */}
       <Footer/>
     </main>
   );
