@@ -8,7 +8,7 @@ const popularPackagesData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat harum corporis possimus atque ex esse, deleniti ad, minima consectetur veritatis magni.",
     originalPrice: "1,07,999",
     discount: "20",
-    link: "",
+    link: "spell-binding-dubai-1129",
     country:'Dubai',
     city:''
   },

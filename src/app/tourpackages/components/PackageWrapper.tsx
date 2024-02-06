@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import {motion} from 'framer-motion'
 import { tourPackageType } from "../types/type";
+import Link from "next/link";
 const PackageWrapper = ({
   tourPackage,
 }: {
@@ -13,7 +14,8 @@ const PackageWrapper = ({
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <motion.div whileHover={{scale:1.05}} className=" p-3 pb-6 w-[24.3%] shadow2 bg-color9 cursor-pointer flex-shrink-0">
+    <Link className="w-[24.3%] flex-shrink-0" href={"/tourpackages/" + tourPackage.link}>
+    <motion.div whileHover={{scale:1.05}} className=" p-3 pb-6 w-full shadow2 bg-color9 cursor-pointer ">
       <Image
         className="w-full h-[18rem]"
         src={tourPackage.image}
@@ -39,6 +41,7 @@ const PackageWrapper = ({
         </div>
       </div>
     </motion.div>
+    </Link>
   );
 };
 
