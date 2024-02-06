@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashedLine = () => {
   return (
-    <div className="w-[96%] mt-16 mb-12 border-t-2 border-color1/10 border-dashed"></div>
+    <div className="w-[96%] mt-16 mb-0 border-t-2 border-color1/30 border-dashed"></div>
     
   )
 }

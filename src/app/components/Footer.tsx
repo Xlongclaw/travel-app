@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const Footer = () => {
   const links = ["About Us", "Events", "FAQs", " The Team"];
   return (
-    <div className="bg-color6 px-48 py-8 flex justify-between items-center">
+    <div className="bg-color9 px-48 py-8 flex justify-between items-center">
       <div className="text-color5 text-xl font-semibold">
         Adventure Island.
       </div>

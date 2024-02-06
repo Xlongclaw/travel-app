@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar";
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <div className="bg-[url('./assets/herobg1.jpg')] bg-top bg-cover w-full h-screen py-16 px-32 flex flex-col relative">
+      <div className="bg-[url('./assets/herobg3.jpg')] bg-top bg-cover w-full h-screen py-16 px-32 flex flex-col relative">
         <NavBar/>
         <div className="flex flex-col flex-1 justify-center items-center mb-16">
           <div className="text-4xl text-black font-semibold mb-4">Your Adventure Begins Here!</div>

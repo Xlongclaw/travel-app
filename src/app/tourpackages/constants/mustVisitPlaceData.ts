@@ -29,6 +29,18 @@ const mustVisitPlaceData = [
       image: require("@/app/assets/herobg4.jpg"),
       link: "",
     },
+    {
+      name: "Australia",
+      subtitle: "Starting at Rs. 20,999 per person",
+      image: require("@/app/assets/herobg6.jpg"),
+      link: "",
+    },
+    {
+      name: "Australia",
+      subtitle: "Starting at Rs. 20,999 per person",
+      image: require("@/app/assets/herobg1.jpg"),
+      link: "",
+    },
   ];
 
   export default mustVisitPlaceData

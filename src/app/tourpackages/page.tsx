@@ -34,12 +34,11 @@ const page = () => {
           <div className="text-sm font-bold flex gap-4 items-center">VIEW ALL <Icon.BsArrowRight className="gap-4"/></div>
         </div>
         <PackagesContainer />
-        <DashedLine />
         <MustVisitContainer />
         <DashedLine />
       </div>
 
-      <div className="mt-16">
+      <div className="mt-0">
         <Footer />
       </div>
     </div>
