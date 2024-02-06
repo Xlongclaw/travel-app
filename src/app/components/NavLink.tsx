@@ -1,18 +1,31 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
 
-const NavLink = ({ link }: { link: {title:string,route:string} }) => {
+const NavLink = ({ link }: { link: { title: string; route: string } }) => {
+  const pathname = usePathname();
   return (
-    <div className={` ${link.title === 'Discover' ?"text-color1":"text-color2"} text-base font-semibold hover:text-color1 cursor-pointer relative pb-3`}>
+    <Link
+      href={link.route}
+      className={` ${
+        link.route === pathname ? "text-color1" : "text-color2"
+      } text-base font-semibold hover:text-color1 cursor-pointer relative pb-3`}
+    >
       {link.title}
-      {link.title === "Discover" && (
-        <Image width={70} height={20} className="mt-2" src={require('../assets/line1.png')} alt="" />
-        // <div className="absolute h-[3px] w-full bg-color1 bottom-0 rounded-tr-[50%/100px]"></div>
-      )}
-    </div>
+      <div className="flex justify-center">
+        {link.route === pathname && (
+          <Image
+            height={20}
+            className="mt-2 w-[70px]"
+            src={require("../assets/line1.png")}
+            alt=""
+          />
+        )}
+      </div>
+    </Link>
   );
 };
 
 export default NavLink;
-// border-radius: 50%/100px 100px 0 0;
