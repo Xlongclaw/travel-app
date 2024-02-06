@@ -2,28 +2,18 @@
 import Image from "next/image";
 import React from "react";
 import {motion} from 'framer-motion'
+import { tourPackageType } from "../types/type";
 const PackageWrapper = ({
   tourPackage,
 }: {
-  tourPackage: {
-    name: string;
-    image: any;
-    night: string;
-    day: string;
-    description: string;
-    originalPrice: string;
-    discount: string;
-    link: string;
-    country: string;
-    city: string;
-  };
+  tourPackage: tourPackageType
 }) => {
   const finalPrice = () => {
     let originalPrice = Number(tourPackage.originalPrice.split(',').join(''))
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <motion.div whileHover={{scale:1.05}} className=" rounded-md p-3 w-[21rem] shadow-md cursor-pointer">
+    <motion.div whileHover={{scale:1.05}} className=" p-3 w-[24.3%] shadow1 bg-color9 cursor-pointer flex-shrink-0">
       <Image
         className="w-full h-[17rem]"
         src={tourPackage.image}

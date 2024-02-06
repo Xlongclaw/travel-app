@@ -51,6 +51,32 @@ const popularPackagesData = [
     country:'Africa',
     city:''
   },
+  {
+    name: "Bingo Africa.",
+    image: require("@/app/assets/herobg6.jpg"),
+    night: "3",
+    day: "4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat harum corporis possimus atque ex esse, deleniti ad, minima consectetur veritatis magni.",
+    originalPrice: "1,69,999",
+    discount: "20",
+    link: "",
+    country:'Africa',
+    city:''
+  },
+  {
+    name: "Bingo Africa.",
+    image: require("@/app/assets/herobg6.jpg"),
+    night: "3",
+    day: "4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat harum corporis possimus atque ex esse, deleniti ad, minima consectetur veritatis magni.",
+    originalPrice: "1,69,999",
+    discount: "20",
+    link: "",
+    country:'Africa',
+    city:''
+  },
 ];
 
 export default popularPackagesData

@@ -35,7 +35,7 @@ const HeroBanner = ({bannerData,height}:{bannerData:bannerDataType,height:Number
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring" }}
-          className="text-color6 cursor-pointer hover:bg-color6 hover:text-color1 border border-color6 mt-2 h-[3rem] text-xs font-semibold flex items-center justify-center w-[10rem]"
+          className="text-color9 cursor-pointer hover:bg-color9 hover:text-color1 border border-color9 mt-2 h-[3rem] text-xs font-semibold flex items-center justify-center w-[10rem]"
         >
           VIEW PACKAGES
         </motion.div>

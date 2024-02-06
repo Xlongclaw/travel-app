@@ -7,19 +7,31 @@ import PackagesContainer from "./components/PackagesContainer";
 import DashedLine from "./components/DashedLine";
 import MustVisitContainer from "./components/MustVisitContainer";
 import bannerData from "./constants/bannerData";
+import * as Icon from "react-icons/bs";
+
 
 const page = () => {
   return (
-    <div className="w-full bg-color9 ">
-      <div className="pt-8 px-32">
+    <div className="w-full bg-[#ffffff] relative ">
+      <div className="pt-8 pl-32 pr-16">
         <NavBar />
       </div>
-      <div className="px-32 ">
-        <HeroBanner bannerData={bannerData} height={400} />
-        <TitleText
-          title="POPULAR PACKAGES"
-          subtitle="Our most popular tour package just for you"
-        />
+      <div className="flex gap-5 justify-center items-center -rotate-90 absolute left-[-8rem] top-[18rem]">
+        <div className="h-[1px] w-[6rem] bg-color3/50"></div>
+        <div className="text-color3/50 text-sm font-semibold">
+          JUST LIVE YOUR DREAMS AND FLY HIGH
+        </div>
+      </div>
+      <div className="pl-32 pr-16 ">
+        <HeroBanner bannerData={bannerData} height={500} />
+        <div className="flex justify-between items-center mt-10 pr-20 pl-8">
+          {/* <div>HELLO</div> */}
+          <TitleText
+            title="OUR POPULAR PACKAGES"
+            subtitle="Our most popular tour package just for you."
+          />
+          <div className="text-sm font-bold flex gap-4 items-center">VIEW ALL <Icon.BsArrowRight className="gap-4"/></div>
+        </div>
         <PackagesContainer />
         <DashedLine />
         <MustVisitContainer />

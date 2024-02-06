@@ -41,3 +41,7 @@ height: 4px;
 .custom-scroll::-webkit-scrollbar-thumb{
   background-color: rgb(234, 234, 234);
 }
+
+.shadow1{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
