@@ -23,7 +23,7 @@ const HeroBanner = ({bannerData,height}:{bannerData:Array<heroBannerDataType>,he
             <Image key={i}
             height={1440}
             width={2160}
-              className="w-full object-cover h-full"
+              className="w-full object-cover h-full hover:scale-105 hover:-translate-x-10 transition-all duration-1000"
               src={banner.image}
               alt=""
             />

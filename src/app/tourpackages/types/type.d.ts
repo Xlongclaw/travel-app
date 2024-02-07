@@ -41,4 +41,10 @@ type heroBannerDataType = {
   image:string
 }
 
- export {bannerDataType,tourPackageType,packageType,heroBannerDataType}
+type placeDataType = {
+  name:string;
+  subtitle:string;
+  image:string
+}
+
+ export {bannerDataType,tourPackageType,packageType,heroBannerDataType,placeDataType}

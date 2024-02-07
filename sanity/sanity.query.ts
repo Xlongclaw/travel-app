@@ -32,6 +32,37 @@ export async function getHeroBannerData() {
 }
 
 
+export async function getPlaceDataByName(place:string) {
+  const placeData  = await client.fetch(
+    groq`*[_type=='place' && name match "${place}"]{
+      name,subtitle,'image':image.asset->url
+    }`
+  );
+  return  placeData[0]
+}
+
+
+export async function getPackageDataByPlace(place:string) {
+  const packages  = await client.fetch(
+    groq`*[_type=='packages' && location match "${place}"]{
+      _id,name,
+      price,
+      startDate,
+      ecdDate,
+      day,
+      night,
+      country,
+      city,
+      description,
+      discount,
+      'tourImages' : tourImages[].asset->url,
+      'hotelImages' : hotelImages[].asset->url,
+      'destinationImages' : destinationImages[].asset->url,
+  }`
+  );
+  return packages
+}
+
 
 export async function getPackagesByCategory(category:string) {
   
