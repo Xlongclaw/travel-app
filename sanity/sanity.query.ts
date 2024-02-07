@@ -42,6 +42,28 @@ export async function getPlaceDataByName(place:string) {
 }
 
 
+export async function getPackageDataByPackageId(packageId:string) {
+  const packageData  = await client.fetch(
+    groq`*[_type=='packages' && _id match "${packageId}"]{
+      _id,name,
+      price,
+      startDate,
+      endDate,
+      day,
+      night,
+      country,
+      city,
+      description,
+      discount,
+      'tourImages' : tourImages[].asset->url,
+      'hotelImages' : hotelImages[].asset->url,
+      'destinationImages' : destinationImages[].asset->url,
+  }`
+  );
+  return  packageData[0]
+}
+
+
 export async function getPackageDataByPlace(place:string) {
   const packages  = await client.fetch(
     groq`*[_type=='packages' && location match "${place}"]{

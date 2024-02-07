@@ -14,7 +14,7 @@ const PackageWrapper = ({
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <Link className="w-[24.3%] flex-shrink-0" href={"/tourpackages/" + tourPackage._id}>
+    <Link className="w-[24.3%] flex-shrink-0" href={"/viewpackage/" + tourPackage._id}>
     <motion.div whileHover={{scale:1.05}} className=" p-3 pb-6 w-full shadow2 bg-color9 cursor-pointer ">
       <Image
         className="w-full h-[18rem]"
