@@ -5,9 +5,12 @@ import PageIndicatorFeatured from "./PageIndicatorFeatured";
 import { motion } from "framer-motion";
 import useCurrentBannerIndex from "../tourpackages/hooks/useCurrentBannerIndex";
 import { heroBannerDataType } from "../tourpackages/types/type";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeroBanner = ({bannerData,height}:{bannerData:Array<heroBannerDataType>,height:Number}) => {
   const index = useCurrentBannerIndex(bannerData)
+  const currentRoute = usePathname()
   return (
     <div style={{height:`${height}px`}} className="w-full flex items-center justify-start mt-4 relative overflow-hidden">
       <div
@@ -32,7 +35,9 @@ const HeroBanner = ({bannerData,height}:{bannerData:Array<heroBannerDataType>,he
         <div className="  text-3xl font-semibold text-color9">
           Explore <strong>{bannerData[index].location}</strong>{" "}
         </div>
-        <div className="text-color9 max-w-[20rem] text-sm">GET 20% off and cashback upto Rs.5000 on your first booking.</div>
+        <div className="text-color9 max-w-[20rem] text-sm">{bannerData[index].description}</div>
+        <Link href={currentRoute + '/' + bannerData[index].location.toLowerCase()}>
+
         <motion.div
           onClick={() => {}}
           whileHover={{ scale: 1.1 }}
@@ -42,6 +47,7 @@ const HeroBanner = ({bannerData,height}:{bannerData:Array<heroBannerDataType>,he
         >
           VIEW PACKAGES
         </motion.div>
+        </Link>
       </div>
       <PageIndicatorFeatured
         bannerData={bannerData}
