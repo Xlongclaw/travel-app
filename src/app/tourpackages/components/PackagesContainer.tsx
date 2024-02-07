@@ -3,16 +3,20 @@ import React, { useState } from 'react'
 import popularPackagesData from '../constants/popularPackagesData'
 import PackageWrapper from './PackageWrapper'
 import * as Icon from "react-icons/bs";
+import { packageType } from '../types/type';
 
 
-const PackagesContainer = () => {
+const PackagesContainer = (
+  {packages}:{packages:Array<packageType>}
+  ) => {
   const [x,setX] = useState(0)
+  
   return (
     <div className='relative mr-16'>
     <div className="flex justify-between mt-4 mr-0 gap-6 relative  overflow-hidden pb-4">
       <div className='flex overflow-hidde p-4 gap-4 transition-all duration-500' style={{transform:`translateX(-${x}%)`}}>
-          {popularPackagesData.map((tourPackage, i) => (
-            <PackageWrapper key={i} tourPackage={JSON.parse(JSON.stringify(tourPackage))} />
+          {packages.map((tourPackage, i) => (
+            <PackageWrapper key={i} tourPackage={tourPackage} />
           ))}
 
       </div>

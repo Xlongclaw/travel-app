@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { heroBannerDataType } from "../types/type";
 
 const useCurrentBannerIndex = (
-  bannerData: Array<{
-    image: string;
-    link: string;
-  }>
+  bannerData: Array<heroBannerDataType>
 ) => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   useEffect(() => {

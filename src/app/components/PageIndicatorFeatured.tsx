@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import { bannerDataType } from '../tourpackages/types/type';
+import { bannerDataType, heroBannerDataType } from '../tourpackages/types/type';
 
 
-const PageIndicatorFeatured = ({bannerData,selected}:{bannerData:bannerDataType,selected:Number}) => {
+const PageIndicatorFeatured = ({bannerData,selected}:{bannerData:Array<heroBannerDataType>,selected:Number}) => {
   return (
     <div className='flex justify-center items-center gap-4 absolute w-[10%] rotate-90 right-[-3rem] top-1/2'>
       {

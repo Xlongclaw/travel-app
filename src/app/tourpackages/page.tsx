@@ -6,11 +6,16 @@ import TitleText from "./components/TitleText";
 import PackagesContainer from "./components/PackagesContainer";
 import DashedLine from "./components/DashedLine";
 import MustVisitContainer from "./components/MustVisitContainer";
-import bannerData from "./constants/bannerData";
+// import bannerData from "./constants/bannerData";
 import * as Icon from "react-icons/bs";
+import { getHeroBannerData, getPackagesByCategory } from "../../../sanity/sanity.query";
+import { heroBannerDataType, packageType } from "./types/type";
 
 
-const page = () => {
+const page = async () => {
+  const popularPackages: Array<packageType> = await getPackagesByCategory('Popular');
+  const bannerData:Array<heroBannerDataType> = await getHeroBannerData()
+  
   return (
     <div className="w-full bg-[#ffffff] relative ">
       <div className="pt-8 pl-32 pr-16">
@@ -33,7 +38,9 @@ const page = () => {
           />
           <div className="text-sm font-bold flex gap-4 items-center">VIEW ALL <Icon.BsArrowRight className="gap-4"/></div>
         </div>
-        <PackagesContainer />
+        <PackagesContainer
+         packages={popularPackages} 
+         />
         <MustVisitContainer />
         <DashedLine />
       </div>

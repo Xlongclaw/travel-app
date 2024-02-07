@@ -14,6 +14,7 @@ export async function getAllPackages() {
           city,
           description,
           discount,
+          location,
           'tourImages' : tourImages[].asset->url,
           'hotelImages' : hotelImages[].asset->url,
           'destinationImages' : destinationImages[].asset->url,
@@ -21,28 +22,41 @@ export async function getAllPackages() {
   );
 }
 
+export async function getHeroBannerData() {
+  return client.fetch(
+    groq`*[_type=='banner']{
+      location,description,
+        'image' : destinationImage.asset->url
+    }`
+  );
+}
+
 
 
 export async function getPackagesByCategory(category:string) {
-  return client.fetch(
+  
+  const packages = await client.fetch(
     groq`*[_type=='category' && title == '${category}']{
         packages[]->{
             _id,name,
           price,
           startDate,
-          ecdDate,
+          endDate,
           day,
           night,
           country,
           city,
           description,
           discount,
+          location,
           'tourImages' : tourImages[].asset->url,
           'hotelImages' : hotelImages[].asset->url,
           'destinationImages' : destinationImages[].asset->url,
         }
       }`
   );
+  
+  return packages[0].packages
 }
 
 

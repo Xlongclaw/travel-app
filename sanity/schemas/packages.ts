@@ -41,6 +41,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    }),
+    defineField({
       name: 'discount',
       title: 'Discount Percentage',
       type: 'string',

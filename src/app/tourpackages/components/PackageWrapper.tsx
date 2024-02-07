@@ -2,24 +2,26 @@
 import Image from "next/image";
 import React from "react";
 import {motion} from 'framer-motion'
-import { tourPackageType } from "../types/type";
+import { packageType } from "../types/type";
 import Link from "next/link";
 const PackageWrapper = ({
   tourPackage,
 }: {
-  tourPackage: tourPackageType
+  tourPackage: packageType
 }) => {
   const finalPrice = () => {
-    let originalPrice = Number(tourPackage.originalPrice.split(',').join(''))
+    let originalPrice = Number(tourPackage.price.split(',').join(''))
     return originalPrice-(originalPrice*Number(tourPackage.discount)/100)
   }
   return (
-    <Link className="w-[24.3%] flex-shrink-0" href={"/tourpackages/" + tourPackage.link}>
+    <Link className="w-[24.3%] flex-shrink-0" href={"/tourpackages/" + tourPackage._id}>
     <motion.div whileHover={{scale:1.05}} className=" p-3 pb-6 w-full shadow2 bg-color9 cursor-pointer ">
       <Image
         className="w-full h-[18rem]"
-        src={tourPackage.image}
+        src={tourPackage.tourImages[0]}
         alt=""
+        width={700}
+        height={700}
       />
       <div className="text-color1 font-bold my-2">
         {tourPackage.name}
@@ -32,8 +34,8 @@ const PackageWrapper = ({
         {tourPackage.description}
       </h3>
       <div className="flex flex-col">
-        <div className=" font-medium text-sm text-color10 relative w-[5.2rem]">
-          Rs. {tourPackage.originalPrice}
+        <div className=" font-medium text-sm text-color10 relative w-[5.5rem]">
+          Rs. {tourPackage.price}
           <div className="absolute h-[2px] w-full bg-red-500 top-1/2"></div>
         </div>
         <div className="text-color1 text-2xl font-semibold">
