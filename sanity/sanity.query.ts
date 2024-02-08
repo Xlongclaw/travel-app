@@ -31,6 +31,14 @@ export async function getHeroBannerData() {
   );
 }
 
+export async function getHeroImageCarouselData() {
+  return client.fetch(
+    groq`*[_type=='heroImageCarousel']{
+      location,title,subtitle,'image' : image.asset->url
+      }`
+  );
+}
+
 
 export async function getPlaceDataByName(place:string) {
   const placeData  = await client.fetch(
