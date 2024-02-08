@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BookNowBtn = ({ link }: { link: string }) => {
   return (
-    <Link className="" href={"viewpackage/"+link}>
+    <Link className="" href={"viewpackage/" + link}>
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

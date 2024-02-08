@@ -1,9 +1,8 @@
 import NavBar from "@/app/components/NavBar";
 import React from "react";
 import { getPackageDataByPackageId } from "../../../../sanity/sanity.query";
-import { packageType } from "@/app/tourpackages/types/type";
-import PackageDisplayWrapper from "./components/PackageDisplayWrapper";
-import Logo from "@/app/components/Logo";
+import { packageType } from "@/app/type";
+import {PackageDisplayWrapper} from "@/app/viewpackage/[packageId]/components";
 
 const page = async ({ params }: { params: { packageId: string } }) => {
   const packageData:packageType = await getPackageDataByPackageId(params.packageId);

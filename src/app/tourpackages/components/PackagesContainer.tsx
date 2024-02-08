@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 import popularPackagesData from '../constants/popularPackagesData'
 import PackageWrapper from './PackageWrapper'
 import * as Icon from "react-icons/bs";
-import { packageType } from '../types/type';
+import { packageType } from '@/app/type';
 
 
 const PackagesContainer = (
-  {packages}:{packages:Array<packageType>}
+  {packagesJSON}:{packagesJSON:string}
   ) => {
+    const packages:Array<packageType> = JSON.parse(packagesJSON)
   const [x,setX] = useState(0)
   
   return (

@@ -3,7 +3,6 @@ import BookNowBtn from "./BookNowBtn";
 import FeaturedSection from "./FeaturedSection";
 import FeaturedWrapper from "./FeaturedWrapper";
 import Footer from "./Footer";
-import HeroBanner from "./HeroBanner";
 import HeroImageCarousel from "./HeroImageCarousel";
 import LocationStrip from "./LocationStrip";
 import Logo from "./Logo";
@@ -18,7 +17,6 @@ export {
   FeaturedSection,
   FeaturedWrapper,
   Footer,
-  HeroBanner,
   HeroImageCarousel,
   LocationStrip,
   Logo,

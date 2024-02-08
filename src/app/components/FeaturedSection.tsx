@@ -4,13 +4,19 @@ import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { packageType } from "@/app/type";
 
-const FeaturedSection = ({featuredPackagesData}:{featuredPackagesData:string}) => {
-  const featuredPackages:Array<packageType> = JSON.parse(featuredPackagesData)
+const FeaturedSection = ({
+  featuredPackagesData,
+}: {
+  featuredPackagesData: string;
+}) => {
+  const featuredPackages: Array<packageType> = JSON.parse(featuredPackagesData);
   return (
     <div className="h-[55rem] bg-color5 text-color6 px-[9rem] py-[6.4rem] shadow-2xl shadow-black">
       <div className="flex justify-between items-center">
         <div className=" mb-[4rem]">
-          <h2 className="text-5xl font-medium cursor-default select-none">Let's start your journey</h2>
+          <h2 className="text-5xl font-medium cursor-default select-none">
+            Let's start your journey
+          </h2>
           <h2 className="text-color7 text-xl font-medium mt-3 cursor-default select-none">
             Journey to the mysterious island.
           </h2>
