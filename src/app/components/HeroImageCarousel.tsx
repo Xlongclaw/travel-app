@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import PageIndicator from './PageIndicator'
-import NavBar from './NavBar'
-import LocationStrip from './LocationStrip'
-import { heroImageCarouselDataType } from '../type'
-import useHeroImageCarouselIndex from '../hooks/useHeroImageCarouselIndex'
+import {LocationStrip,NavBar,PageIndicator} from '@/app/components'
+import { heroImageCarouselDataType } from '@/app/type'
+import {useHeroImageCarouselIndex} from '@/app/hooks'
 
 const HeroImageCarousel = ({heroImageCarouselJSON}:{heroImageCarouselJSON:string}) => {
     const heroImageCarouselData:heroImageCarouselDataType = JSON.parse(heroImageCarouselJSON)

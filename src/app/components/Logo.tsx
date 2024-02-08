@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 
-const Logo = () => {
+const Logo:React.FC = () => {
   return (
-    <div className="font-bold text-lg text-color1 mb-4">Adventure Island.</div>
+    <Link href={'/'} className="font-bold text-lg text-color1 mb-4 cursor-pointer hover:text-color5">Adventure Island.</Link>
   )
 }
 
