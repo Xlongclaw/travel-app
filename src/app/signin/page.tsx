@@ -12,10 +12,7 @@ const page = async () => {
   return (
     <div className="flex px-32 py-12 h-screen relative">
       <Form />
-      <SignInSlider
-        sliderDataJSON={JSON.stringify(signInSliderData)}
-        height={700}
-      />
+      <SignInSlider sliderDataJSON={JSON.stringify(signInSliderData)} />
       {/* <div
         className=" w-1/2 bg-cover"
         style={{ backgroundImage: `url(${signInSliderData[0].image})` }}

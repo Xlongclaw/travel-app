@@ -1,20 +1,16 @@
 const navLinks = [
-    {
-      title:'Discover',
-      route:'/'
-    }, 
-    {
-      title:'Tour Packages',
-      route:'/tourpackages'
-    }, 
-    {
-      title:'Contact us',
-      route:'contactus'
-    }, 
-    {
-      title:'Sign in',
-      route:'signin'
-    }, 
-  ];
+  {
+    title: "Discover",
+    route: "/",
+  },
+  {
+    title: "Tour Packages",
+    route: "/tourpackages",
+  },
+  {
+    title: "Contact us",
+    route: "contactus",
+  },
+];
 
-  export default navLinks
+export default navLinks;

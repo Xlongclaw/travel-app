@@ -3,10 +3,7 @@ import {
   getPackagesByCategory,
 } from "../../sanity/sanity.query";
 import { FeaturedSection, Footer, HeroImageCarousel } from "@/app/components";
-import { SessionProvider } from "next-auth/react";
-import { GetSessionParams } from "next-auth/react";
-
-export default async function Home({ session }: { session: GetSessionParams }) {
+export default async function Home() {
   const heroCarouselData = await getHeroImageCarouselData();
   const featuredPackagesData = await getPackagesByCategory("Featured");
   return (
