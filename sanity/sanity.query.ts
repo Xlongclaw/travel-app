@@ -39,19 +39,25 @@ export async function getHeroImageCarouselData() {
   );
 }
 
+export async function getSignInSliderData() {
+  return client.fetch(
+    groq`*[_type=='signinSlider']{
+      title,'image' : image.asset->url,description
+      }`
+  );
+}
 
-export async function getPlaceDataByName(place:string) {
-  const placeData  = await client.fetch(
+export async function getPlaceDataByName(place: string) {
+  const placeData = await client.fetch(
     groq`*[_type=='place' && name match "${place}"]{
       name,subtitle,'image':image.asset->url
     }`
   );
-  return  placeData[0]
+  return placeData[0];
 }
 
-
-export async function getPackageDataByPackageId(packageId:string) {
-  const packageData  = await client.fetch(
+export async function getPackageDataByPackageId(packageId: string) {
+  const packageData = await client.fetch(
     groq`*[_type=='packages' && _id match "${packageId}"]{
       _id,name,
       price,
@@ -68,12 +74,11 @@ export async function getPackageDataByPackageId(packageId:string) {
       'destinationImages' : destinationImages[].asset->url,
   }`
   );
-  return  packageData[0]
+  return packageData[0];
 }
 
-
-export async function getPackageDataByPlace(place:string) {
-  const packages  = await client.fetch(
+export async function getPackageDataByPlace(place: string) {
+  const packages = await client.fetch(
     groq`*[_type=='packages' && location match "${place}"]{
       _id,name,
       price,
@@ -90,12 +95,10 @@ export async function getPackageDataByPlace(place:string) {
       'destinationImages' : destinationImages[].asset->url,
   }`
   );
-  return packages
+  return packages;
 }
 
-
-export async function getPackagesByCategory(category:string) {
-  
+export async function getPackagesByCategory(category: string) {
   const packages = await client.fetch(
     groq`*[_type=='category' && title == '${category}']{
         packages[]->{
@@ -116,10 +119,9 @@ export async function getPackagesByCategory(category:string) {
         }
       }`
   );
-  
-  return packages[0].packages
-}
 
+  return packages[0].packages;
+}
 
 // export async function getProductById(_id: string) {
 //   return client.fetch(groq`*[_id match "${_id}"]{
@@ -156,7 +158,7 @@ export async function getPackagesByCategory(category:string) {
 //       subcategory[]->{title,description,
 //       'image':image.asset->url,
 //       'icon':icon.asset->url}
-      
+
 //   }`);
 // }
 // export async function getTopPicksByCategory(category:string) {

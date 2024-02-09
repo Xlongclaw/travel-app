@@ -2,6 +2,11 @@ type bannerDataType = Array<{
   image: string;
   link: string;
 }>;
+type signInSliderDataType = Array<{
+  image: string;
+  title: string;
+  description: string;
+}>;
 
 type tourPackageType = {
   name: string;
@@ -60,4 +65,5 @@ export {
   heroBannerDataType,
   placeDataType,
   heroImageCarouselDataType,
+  signInSliderDataType,
 };

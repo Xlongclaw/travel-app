@@ -1,11 +1,12 @@
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from "sanity";
 
-import category from './schemas/category'
-import packages from './schemas/packages'
-import banner from './schemas/banner'
-import place from './schemas/place'
-import heroImageCarousel from './schemas/heroImageCarousel'
+import category from "./schemas/category";
+import packages from "./schemas/packages";
+import banner from "./schemas/banner";
+import place from "./schemas/place";
+import heroImageCarousel from "./schemas/heroImageCarousel";
+import signinSlider from "./schemas/signinSlider";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [ category,packages,banner,place,heroImageCarousel],
-}
+  types: [category, packages, banner, place, heroImageCarousel, signinSlider],
+};
