@@ -30,6 +30,7 @@ const SignUpForm = ({ changeForm }: { changeForm: (type: string) => void }) => {
           />
         }
       </LoginProviderBtn>
+
       <div className=" w-[30rem] mt-6">
         <h5 className="text-sm font-semibold text-color1 p-1">
           Email
@@ -49,6 +50,16 @@ const SignUpForm = ({ changeForm }: { changeForm: (type: string) => void }) => {
           className="border-2 border-color1/50 px-2 py-3 w-full rounded-lg"
           type="password"
           placeholder="Enter your Password"
+        />
+      </div>
+      <div className=" w-[30rem] mt-4">
+        <h5 className="text-sm font-semibold text-color1 p-1">
+          Confirm Password <span className="text-red-700">*</span>
+        </h5>
+        <input
+          className="border-2 border-color1/50 px-2 py-3 w-full rounded-lg"
+          type="password"
+          placeholder="Confirm Password"
         />
       </div>
       <div className="flex pt-6 gap-2 items-center">

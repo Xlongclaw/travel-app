@@ -58,7 +58,7 @@ const SignInForm = ({ changeForm }: { changeForm: (type: string) => void }) => {
         </h5>
       </div>
       <button className="py-4 w-[30rem] bg-color4 font-semibold text-color9 mt-5 rounded-lg">
-        Sign up
+        Sign in
       </button>
       <h3
         onClick={() => changeForm("signup")}
