@@ -3,6 +3,7 @@ import {
   getPackagesByCategory,
 } from "../../sanity/sanity.query";
 import { FeaturedSection, Footer, HeroImageCarousel } from "@/app/components";
+
 export default async function Home() {
   const heroCarouselData = await getHeroImageCarouselData();
   const featuredPackagesData = await getPackagesByCategory("Featured");

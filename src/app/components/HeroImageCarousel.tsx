@@ -37,7 +37,10 @@ const HeroImageCarousel = ({
           src={require("@/app/assets/arrow1.png")}
         />
       </div>
-      <LocationStrip opacity="100%" location={heroImageCarouselData[imageIndex].location} />
+      <LocationStrip
+        opacity="100%"
+        location={heroImageCarouselData[imageIndex].location}
+      />
       <PageIndicator
         imageData={heroImageCarouselData}
         imageIndex={imageIndex}

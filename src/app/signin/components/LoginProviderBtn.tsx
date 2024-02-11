@@ -11,7 +11,7 @@ const LoginProviderBtn = ({
 }) => {
   const googleLogin = async () => {
     await signIn(name.toLowerCase(), {
-      callbackUrl: "/",
+      callbackUrl: "/signin/new-user-check-google",
       redirect: true,
     });
   };
