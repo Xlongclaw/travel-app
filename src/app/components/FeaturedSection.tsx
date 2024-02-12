@@ -15,7 +15,7 @@ const FeaturedSection = ({
       <div className="flex justify-between items-center">
         <div className=" mb-[4rem]">
           <h2 className="text-5xl font-medium cursor-default select-none">
-            Let's start your journey
+            Let&apos;s start your journey
           </h2>
           <h2 className="text-color7 text-xl font-medium mt-3 cursor-default select-none">
             Journey to the mysterious island.
