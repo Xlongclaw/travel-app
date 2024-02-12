@@ -9,7 +9,7 @@ const SignInForm = ({ changeForm }: { changeForm: (type: string) => void }) => {
       <div className="mb-6 flex flex-col items-center ">
         <h2 className="text-3xl font-bold">Welcome Back!</h2>
         <h3 className="text-sm font-medium text-color2">
-          Let's get ready to fly high above the sky
+          Let&apos;s get ready to fly high above the sky
         </h3>
       </div>
       <LoginProviderBtn name="Google">

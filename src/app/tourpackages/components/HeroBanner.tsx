@@ -57,7 +57,10 @@ const HeroBanner = ({
           </motion.div>
         </Link>
       </div>
-      <PageIndicatorFeatured bannerDataJSON={JSON.stringify(bannerData)} selected={index} />
+      <PageIndicatorFeatured
+        bannerDataJSON={JSON.stringify(bannerData)}
+        selected={index}
+      />
     </div>
   );
 };

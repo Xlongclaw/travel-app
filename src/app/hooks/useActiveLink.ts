@@ -1,9 +1,9 @@
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const useActiveLink = () => {
+const useActiveLink = async () => {
   const [activeLink, setActiveLink] = useState("discover");
-  const route = usePathname();
+  const route = await usePathname();
   useEffect(() => {
     if (route === "/") setActiveLink("discover");
     else setActiveLink("tourpackages");

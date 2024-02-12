@@ -45,6 +45,7 @@ const PackageDisplayWrapper = ({
           <div className="absolute left-8 bottom-8 flex gap-2 items-center">
             {currentImageArray.map((img, index) => (
               <div
+                key={img}
                 style={
                   imageIndex === index
                     ? {
@@ -120,11 +121,11 @@ const PackageDisplayWrapper = ({
             <Icon.BsAirplane /> Package Overview
           </h2>
           <h3 className="mt-2 font-medium text-sm text-color2">
-             Experience what it's like to feel on top of the world at the Burj
-            Khalifa Enter the grand reception area of the Dubai Mall- the
-            world's largest shopping arena and take the 65-metre travelator.
-            Enjoy the visual presentation showcasing the wonders of Dubai and
-            Burj Khalifa along your way.
+             Experience what it&apos;s like to feel on top of the world at the
+            Burj Khalifa Enter the grand reception area of the Dubai Mall- the
+            world&apos;s largest shopping arena and take the 65-metre
+            travelator. Enjoy the visual presentation showcasing the wonders of
+            Dubai and Burj Khalifa along your way.
           </h3>
         </div>
         <div className="bordes border-color2/20 text-color1 mt-4 p-4">
