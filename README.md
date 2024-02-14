@@ -1,6 +1,6 @@
 ## DEPLOYED SITE LINK
 
-[https://xlc-portfolio.onrender.com](https://xlc-portfolio.onrender.com)
+[https://travel-app-next.onrender.com](https://travel-app-next.onrender.com)
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

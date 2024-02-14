@@ -10,7 +10,7 @@ const NavLinks: React.FC = () => {
   const currentRoute = usePathname();
   const [userData, setUserData] = useState(null);
   useEffect(() => {
-    axios.get("http://localhost:3000/api/get-user").then((res) => {
+    axios.get("/api/get-user").then((res) => {
       setUserData(res.data);
     });
     console.log(userData);
